@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(233, 47%, 7%);
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 300px;
+    height: 95%;
+    background-color:  hsl(244, 38%, 16%);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.image, .description, .sp{
+    max-width: 100%;
+    max-height: 33.33%;
+}
+
+.image{
+    overflow: hidden;
+    position: relative;
+}
+
+img{
+    width: 100%;
+    min-height: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(277, 64%, 50%, 0.7);
+    border-radius: 10px 10px 0 0;
+}
+
+.description{
+    margin: 20px;
+}
+
+h1{
+    font-size: 25px;
+    margin: 20px 0 10px 0;
+}
+
+span{
+    color:hsl(277, 64%, 61%);
+}
+
+h1, h2{
+    font-family: "Inter", sans-serif;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+.paragraph{
+    font-family: "Inter", sans-serif;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.paragraph-1, .paragraph-2, .paragraph-3{
+    font-size: 10px;
+    font-family: "Lexend Deca", sans-serif;
+    margin-top: 5px;
+}
+
+.sp__numbers{
+    margin: 20px 0;
+}
+
+@media screen and (min-width: 800px){
+    .card{
+        width: 90%;
+        height: 50%;
+        display: flex;
+        flex-flow: column wrap-reverse;
+        text-align: unset;
+    }
+
+    .image, .description, .sp{
+        width: 50%;
+        max-height: none;
+    }
+
+    .image{
+        height: 100%;
+    }
+
+    img{
+        border-radius: 0 10px 10px 0;
+    }
+
+    .image::after {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .description{
+        margin: 0;
+    }
+
+    h1{
+        margin: 40px 20px  10px 20px;
+    }
+
+    .description__paragraph{
+        margin:10px 20px;
+    }
+
+    .sp{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding: 50px 0;
+    }
+
+    .sp__numbers{
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .card{
+        width: 900px;
+    }
+    
+    .description{
+        max-height: 70%;
+    }
+    
+    .description__paragraph{
+        margin: 30px 30px 30px 20px;
+    }
+}
